@@ -39,6 +39,7 @@ const style = {
   featured: {
     card: {
       height: '250px',
+      background: 'transparent',
       image: {
         borderRadius: '0 3px 3px 0'
       }
@@ -46,6 +47,7 @@ const style = {
     card2: {
         padding:'15px',
         alignItems: 'center',
+        background: 'transparent',
         borderRadius:'10px',
         image: {
           borderRadius: '0 3px 3px 0'

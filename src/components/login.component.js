@@ -84,7 +84,7 @@ export default class Login extends Component {
   render() {
     return (
       <div className="col-md-12">
-        <div className="card card-container">
+        <div style={{background:'transparent', marginBottom: '50px'}} className="card card-container">
           <img src={logo}
           alt="welcome-img"
           style={{width:'inherit',maxWidth:'240px'}}

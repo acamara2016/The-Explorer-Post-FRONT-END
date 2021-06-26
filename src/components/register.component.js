@@ -125,7 +125,7 @@ export default class Register extends Component {
   render() {
     return (
       <div className="col-md-12">
-        <div className="card card-container">
+        <div style={{background:'transparent'}} className="card card-container">
           <img
             src={logo}
             style={{width:'inherit',maxWidth:'240px'}}

@@ -10,6 +10,7 @@ import  {
 } from 'bootstrap-4-react';
 import AuthService from "./services/auth.service";
 import {ThemeProvider} from "styled-components";
+import { Navbar, BImg } from 'bootstrap-4-react';
 import { GlobalStyles } from "./components/globalStyles";
 import { lightTheme, darkTheme } from "./components/Themes"
 import Login from "./components/login.component";
@@ -21,6 +22,8 @@ import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
 import AddPost from "./components/home/NewPost";
 import Edit from "./components/home/PostDetails";
+import brand from './brand.svg'
+import Footer from './components/footer.component'
 const style = {
   h: {
     fontFamily: '"Playfair Display", Georgia, "Times New Roman", serif'
@@ -99,14 +102,6 @@ const Header = props => (
 const PlayfairDisplay = props => (
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet" />
 )
-const Footer = props => (
-  <footer style={style.footer}>
-    <p>The Explorer Post, 2021</p>
-    <p>
-      <a href="#home">Back to top</a>
-    </p>
-  </footer>
-)
 
 class App extends Component {
   constructor(props) {
@@ -142,13 +137,13 @@ class App extends Component {
 
   render() {
     const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
-    
     return (
-      <div>
-      {/* <button onClick={themeToggler}>Switch Theme</button> */}
-        {/* {currentUser && (<Header/>)} */}
+      <div style={{backgroundColor:"bisque"}}>
         <PlayfairDisplay/>
         <nav className="navbar navbar-expand sticky-top navbar-dark bg-dark">
+        <Navbar.Brand href="/">
+          DailyDose
+        </Navbar.Brand>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to={"/feeds"} className="nav-link">
@@ -231,7 +226,7 @@ class App extends Component {
             <Route path="/admin" component={BoardAdmin} />
           </Switch>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     );
   }

@@ -181,8 +181,8 @@ class Post extends Component {
       <React.Fragment>
           <Row>
           <Col col="12 md-8">
-            <InputGroup style={{marginTop:"20px"}} mb="1">
-            <Form.Input value={this.state.search} placeholder="Search post" onChange={(e)=>this.handleSearch(e)} type="text" />
+            <InputGroup style={{marginTop:"20px", background: "transparent"}} mb="1">
+            <Form.Input style={{background: "transparent"}} value={this.state.search} placeholder="Search post" onChange={(e)=>this.handleSearch(e)} type="text" />
           </InputGroup>
             <Featured features={posts} />
           </Col>

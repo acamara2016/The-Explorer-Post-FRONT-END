@@ -64,7 +64,7 @@ class Follows extends Component {
             <img src={logo}/>
             {otherUsers.map((user) =>{
                 return (
-                    <ListGroup.Item id={user._id} key={user._id} ><Link to={`/user/${user.username}`}>@{user.username}</Link></ListGroup.Item>
+                    <ListGroup.Item style={{background:"transparent"}} id={user._id} key={user._id} ><Link to={`/user/${user.username}`}>@{user.username}</Link></ListGroup.Item>
                     )
             })}
           
